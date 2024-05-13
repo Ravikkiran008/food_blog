@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="home.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+      @charset "ISO-8859-1";
+
+      * {
+        font-family: "Manrope", sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        font-family: "Manrope", sans-serif;
+      }
+
+      #signupbtn{
+        padding: 7px 88px 7px 88px;
+        background-color: black;
+        color: aliceblue;
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        margin: auto;
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 19px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      #gen {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+	  span{
+		color:red;
+		font-size: small;
+	  }
+
+	  .otherbuttons{
+		padding: 6px 30px 6px 30px;
+        background-color: black;
+        color: aliceblue;
+        border-radius: 4px;
+	  }
+    </style>
+  </head>
+  <div id="navdiv">
+    <nav>
+        <div id="Logo">Palate Paradise</div>
+        <div id="menu">
+            <ul>
+                <li><a href="C:\Users\2329320\OneDrive - Cognizant\Desktop\project_1[food_blog]\home.html" >Home</a></li>
+                <li><a href="C:\Users\2329320\OneDrive - Cognizant\Desktop\project_1[food_blog]\Recipes.html" target="_blank">Recipes</a></li>
+                <li><a href="C:\Users\2329320\OneDrive - Cognizant\Desktop\project_1[food_blog]\Signup.html" target="_blank">Signup</a></li>
+                <li><a href="C:\Users\2329320\OneDrive - Cognizant\Desktop\project_1[food_blog]\Login.html" target="_blank">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+  <body>
+    <div id="form">
+      <h2>Signup</h2>
+      <form method="post" onsubmit="signup_submission()">
+		
+        <input type="text" placeholder="Name" name="name"  th:field="*{name}" required />
+		
+		
+        <input type="email" placeholder="Email" name="email"   th:field="*{email}"required />
+		
+		
+        <input type="number" placeholder="Mobile" required name="mobile" th:field="*{mobile}" />
+		
+		
+        <input type="password" placeholder="Password" name="password" th:field="*{password}" required/>
+           
+        <div id="gen">
+          <div><label>Gender : </label></div>
+          <div>
+            <label for="male" id="male" name="gender">male</label>
+            <input type="radio" id="male" name="gender" value="male" />
+          </div>
+
+          <div>
+            <label for="female" id="female" name="gender">female</label>
+            <input type="radio" id="female" name="gender" value="female" />
+          </div>
+        </div>
+
+		<span ></span>
+        <input type="date" id="dob" name="dob" />
+
+        <button id="signupbtn">Signup</button>
+        <br />
+        <br />
+		  <button class="otherbuttons" type="reset"><a href="C:\Users\2329320\OneDrive - Cognizant\Desktop\project_1[food_blog]\home.html" style="text-decoration:none ;color: white;">Cancel</a></button>
+	      
+      </form>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>
